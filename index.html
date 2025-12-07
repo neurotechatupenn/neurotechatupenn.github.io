@@ -22,11 +22,15 @@
         header {
             background: var(--penn-blue);
             color: white;
-            text-align: center;
-            padding: 72px 20px 42px 20px;
+            padding: 32px 20px;
+            display: flex;                 /* put logo + title on one row */
+            align-items: center;           /* vertically center them */
+            justify-content: center;       /* center the whole block */
+            gap: 20px;                     /* space between logo and text */
+            text-align: left;              /* title text left-aligned */
         }
         header h1 {
-            font-size: 46px;
+            font-size: 32px;
             margin: 0;
             font-weight: 700;
         }
@@ -40,20 +44,17 @@
         }
         /* Original, Penn-colored logo (not the official Penn shield) */
         .logo-mark {
-            margin: 12px auto 16px auto;
-            width: 110px;
-            height: 110px;
-            background:
-                linear-gradient(145deg, #011F5B 0%, #011F5B 50%, #990000 50%, #990000 100%);
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 34px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            width: 72px;                   /* smaller, elegant size */
+            height: 72px;
+            border-radius: 16px;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+        .logo-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;           /* keeps the logo proportions */
         }
         .logo-mark span {
             display: block;
