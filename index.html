@@ -136,6 +136,7 @@
             display: flex;
             gap: 14px;
             align-items: center;
+            box-sizing: border-box;   /* add */
         }
         .leader-photo {
             width: 70px;
@@ -145,19 +146,14 @@
             flex-shrink: 0;
             /* TODO: Replace with real headshots via background-image */
         }
-        .leader-info h3 {
-            color: #011F5B;
-            margin: 0 0 4px 0;
-            font-size: 18px;
-        }
-        .leader-info p {
-            margin: 0;
-            font-size: 14px;
-        }
+        .leader-info h3,
+        .leader-info p,
         .leader-info a {
-            color: #990000;
-            text-decoration: none;
-            font-weight: 600;
+            margin: 0;
+            margin-bottom: 4px;
+            font-size: 14px;
+            white-space: normal;      /* allow wrapping */
+            word-break: break-word;   /* break long emails if needed */
         }
         @media (max-width: 600px) {
             header h1 {
@@ -274,7 +270,7 @@
             </div>
             <div class="leader-info">
                 <h3>Jimin Jung</h3>
-                <p>Leadership Team — UPenn Prestige</p>
+                <p>Co-Founder</p>
                 <p><a href="mailto:jjimin@seas.upenn.edu">jjimin@seas.upenn.edu</a></p>
             </div>
         </div>
@@ -285,7 +281,7 @@
             </div>
             <div class="leader-info">
                 <h3>Arianna Alonso Bizzi</h3>
-                <p>Leadership Team — UPenn Prestige</p>
+                <p>Co-Founder</p>
                 <p><a href="mailto:alari@seas.upenn.edu">alari@seas.upenn.edu</a></p>
             </div>
         </div>
@@ -296,7 +292,7 @@
           </div>
           <div class="leader-info">
             <h3>Vishwas Dhabhai</h3>
-            <p>Leadership Team — UPenn Prestige</p>
+            <p>Founding Member</p>
             <p><a href="mailto:vishwas.dhabhai@seas.upenn.edu">vishwas.dhabhai@seas.upenn.edu</a></p>
           </div>
         </div>
@@ -312,7 +308,7 @@
 </section>
 
 <footer>
-    © 2025 UPenn Prestige — University of Pennsylvania (independent, student-led initiative)
+    © 2025 Neurotech@UPenn — University of Pennsylvania (independent, researchers-led organization)
 </footer>
 </body>
 </html>
