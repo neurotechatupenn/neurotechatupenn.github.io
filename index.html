@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UPenn Prestige</title>
+    <title>UPenn Prestige — Computational Neurotech × AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description"
+          content="UPenn Prestige — a computationally focused neurotechnology collective at the University of Pennsylvania, exploring brain-like systems, neural networks, attention, and RLHF.">
     <style>
         body {
             margin: 0;
@@ -13,32 +14,50 @@
             background-color: #ffffff;
             line-height: 1.6;
         }
-
         :root {
             --penn-blue: #011F5B;
             --penn-red: #990000;
             --light-grey: #e6e6e6;
         }
-
         header {
             background: var(--penn-blue);
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 72px 20px 42px 20px;
         }
-
         header h1 {
-            font-size: 48px;
+            font-size: 46px;
             margin: 0;
             font-weight: 700;
         }
-
         header p {
-            font-size: 20px;
-            margin-top: 10px;
+            font-size: 18px;
+            margin-top: 12px;
             opacity: 0.9;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
+        /* Original, Penn-colored logo (not the official Penn shield) */
+        .logo-mark {
+            margin: 12px auto 16px auto;
+            width: 110px;
+            height: 110px;
+            background:
+                linear-gradient(145deg, #011F5B 0%, #011F5B 50%, #990000 50%, #990000 100%);
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+        .logo-mark span {
+            display: block;
+        }
         nav {
             background: #ffffff;
             border-bottom: 1px solid #e0e0e0;
@@ -46,61 +65,40 @@
             top: 0;
             z-index: 10;
         }
-
         nav .nav-inner {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 10px 20px;
             display: flex;
             justify-content: flex-end;
-            gap: 16px;
+            gap: 18px;
             font-size: 14px;
         }
-
         nav a {
             color: var(--penn-blue);
             text-decoration: none;
             font-weight: 500;
         }
-
         nav a:hover {
             color: var(--penn-red);
         }
-
         section {
-            max-width: 900px;
+            max-width: 960px;
             margin: 60px auto;
             padding: 0 20px;
         }
-
         h2 {
             color: var(--penn-blue);
             border-left: 5px solid var(--penn-red);
             padding-left: 12px;
             font-size: 28px;
+            margin-top: 0;
         }
-
         .mission-box {
             background: var(--light-grey);
-            padding: 25px;
+            padding: 24px;
             border-radius: 8px;
         }
-
-        footer {
-            background: var(--penn-blue);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-            font-size: 14px;
-        }
-
-        .contact a {
-            color: var(--penn-red);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
         .research-tags span {
             display: inline-block;
             background: var(--penn-blue);
@@ -108,30 +106,90 @@
             padding: 6px 12px;
             border-radius: 20px;
             margin: 6px 6px 0 0;
+            font-size: 13px;
+        }
+        ul {
+            margin-top: 8px;
+        }
+        footer {
+            background: var(--penn-blue);
+            color: white;
+            text-align: center;
+            padding: 28px;
+            margin-top: 60px;
             font-size: 14px;
         }
-
-        ul {
-            margin-top: 0;
+        .contact a {
+            color: var(--penn-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 26px;
+        }
+        .leader-card {
+            padding: 18px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+        .leader-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #d0d0d0;
+            flex-shrink: 0;
+            /* TODO: Replace with real headshots via background-image */
+        }
+        .leader-info h3 {
+            color: #011F5B;
+            margin: 0 0 4px 0;
+            font-size: 18px;
+        }
+        .leader-info p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .leader-info a {
+            color: #990000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 34px;
+            }
+            header {
+                padding: 56px 16px 32px 16px;
+            }
         }
     </style>
 </head>
 <body>
-
 <header>
+    <div class="logo-mark">
+        <span>UP</span>
+    </div>
     <h1>UPenn Prestige</h1>
-        <div style="margin: 20px auto; width: 100px; height: 100px; background: linear-gradient(135deg, #011F5B, #990000); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px; font-weight: bold;">N</div>
-    <p>Advancing Neurotech × AI Research at the University of Pennsylvania</p>
+    <p>
+        A computationally focused neurotechnology collective at the University of Pennsylvania,
+        building systems that learn and reason like brains — from cortical circuits to large-scale
+        neural networks, attention, and RLHF.
+    </p>
 </header>
 
 <nav>
     <div class="nav-inner">
         <a href="#about">About</a>
         <a href="#mission">Mission</a>
-        <a href="#research">Research Areas</a>
+        <a href="#research">Research</a>
         <a href="#talks">Prestige Talks</a>
         <a href="#publications">Publications</a>
-        <a href="#leadership">Leadership Team</a>
+        <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
@@ -139,80 +197,131 @@
 <section id="about">
     <h2>About</h2>
     <p>
-        <strong>UPenn Prestige</strong> is a student-led research identity highlighting innovation in Neurotechnology,
-        Machine Learning, Cognitive Systems, and Computational Neuroscience at the University of Pennsylvania.
-        The initiative focuses on credibility, outreach, and meaningful scientific engagement with top global institutions.
+        <strong>UPenn Prestige</strong> is a student-led research identity at the University of Pennsylvania
+        focused on the computational foundations of intelligence in biological and artificial systems.
+        The group is designed to fascinate computer scientists, neuroscientists, and neuroengineers alike,
+        with a deliberate tilt toward modeling, algorithms, and large-scale neural network design.
+    </p>
+    <p>
+        Prestige sits at the interface of brain circuits, neurotechnology, and modern AI. The group aims to
+        understand how real neural systems compute and to use those principles to inform attention mechanisms,
+        reinforcement learning from human feedback (RLHF), and scalable architectures for learning and control.
     </p>
 </section>
 
 <section id="mission">
     <h2>Mission</h2>
     <div class="mission-box">
+        <p>
+            UPenn Prestige exists to make Penn a hub for brain-inspired computation — where ideas flow
+            between systems neuroscience, neurotech labs, and cutting-edge AI research groups.
+        </p>
         <ul>
-            <li>Raise the visibility and trust of UPenn Neurotech initiatives.</li>
-            <li>Engage with top CS and AI departments across the world.</li>
-            <li>Host high-quality conversations with leading researchers.</li>
-            <li>Showcase strong, upcoming research talent from Penn.</li>
-            <li>Bridge Neurotech, AI Safety, and Cognitive Systems research.</li>
+            <li>Build a rigorous, computation-first community around neural networks, brain-like systems, and systems neuroscience.</li>
+            <li>Design and analyze models that connect cortical circuits, attention, and RLHF with modern deep learning practice.</li>
+            <li>Create a bridge between neurotechnology platforms (BCIs, large-scale neural recordings) and CS/AI methods.</li>
+            <li>Support student-led research, reading groups, and collaborations that push towards scalable, interpretable, reliable AI systems.</li>
         </ul>
     </div>
 </section>
 
 <section id="research">
     <h2>Research Areas</h2>
+    <p>
+        The group is oriented around questions that sit naturally between computer science and neurotechnology:
+        how do brains implement credit assignment, attention, memory, and control — and what does that imply
+        for the next generation of neural networks and RLHF pipelines?
+    </p>
     <div class="research-tags">
-        <span>Neurotech</span>
-        <span>Machine Learning</span>
-        <span>Computational Neuroscience</span>
-        <span>Robotics</span>
-        <span>Cognitive Systems</span>
-        <span>AI Safety</span>
-        <span>LLMs &amp; Reasoning</span>
-        <span>Brain-Computer Interfaces</span>
-        <span>Reinforcement Learning</span>
+        <span>Brain-inspired deep learning</span>
+        <span>Attention & transformers</span>
+        <span>Reinforcement learning & RLHF</span>
+        <span>Computational & systems neuroscience</span>
+        <span>Neurotechnology & BCIs</span>
+        <span>Alignment & safety primitives</span>
     </div>
+    <ul>
+        <li><strong>Brain-inspired neural networks:</strong> Architectures that borrow from cortical circuits and recurrent dynamics, including attention-based and memory-augmented models.</li>
+        <li><strong>Attention and representation:</strong> Comparing attention mechanisms in transformers with selective routing and population codes in real neural circuits.</li>
+        <li><strong>Reinforcement learning & RLHF:</strong> Algorithms for credit assignment, preference modeling, and policy optimization informed by neural and behavioral data.</li>
+        <li><strong>Neurotechnology as a testbed:</strong> Using BCIs and large-scale recordings as constraints and evaluation environments for models of perception, decision, and control.</li>
+    </ul>
 </section>
 
 <section id="talks">
     <h2>Prestige Talks</h2>
     <p>
-        <em>Prestige Talks</em> is a conversation-driven initiative featuring researchers in AI, neuroscience,
-        computer science, robotics, cognitive systems, and computational theory.
-        These discussions are intentionally short, high-signal, and designed to foster insightful academic exchange.
+        Prestige Talks is a high-signal seminar and discussion series designed to be technically deep for CS/AI
+        audiences while remaining grounded in real neural data and neurotech platforms.
     </p>
+    <ul>
+        <li>Invited talks from researchers working on cortical circuit models, attention, and large-scale neural networks.</li>
+        <li>Sessions on RLHF, alignment, and how human feedback and brain signals can shape policy learning.</li>
+        <li>Whiteboard-heavy discussions and paper clubs bridging systems neuroscience, deep learning, and neuroengineering.</li>
+    </ul>
 </section>
 
 <section id="publications">
-    <h2>Publications</h2>
-    <p>No formal publications listed yet. More coming soon.</p>
+    <h2>Publications & Projects</h2>
+    <p>
+        This section will highlight student-led projects, collaborations with Penn labs, and external research
+        that aligns with the group’s focus on computational neuroscience and brain-inspired AI.
+    </p>
+    <ul>
+        <li>In-progress reading lists on attention, RLHF, and neural circuit models.</li>
+        <li>Summaries of internal projects and collaborations (to be added as work develops).</li>
+        <li>Pointers to relevant Penn labs and centers working at the neurotech × AI interface.</li>
+    </ul>
 </section>
 
 <section id="leadership">
-    <h2>Leadership Team</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-        <div style="padding: 20px; background: #f5f5f5; border-radius: 8px;">
-            <h3 style="color: #011F5B; margin-top: 0;">Jimin Jung</h3>
-            <p><a href="mailto:jjimin@seas.upenn.edu" style="color: #990000; text-decoration: none; font-weight: 600;">jjimin@seas.upenn.edu</a></p>
+    <h2>Leadership</h2>
+    <div class="leadership-grid">
+        <div class="leader-card">
+            <div class="leader-photo">
+                <!-- Replace with: style="background-image:url('jimin.jpg'); background-size:cover; background-position:center;" -->
+            </div>
+            <div class="leader-info">
+                <h3>Jimin Jung</h3>
+                <p>Leadership Team — UPenn Prestige</p>
+                <p><a href="mailto:jjimin@seas.upenn.edu">jjimin@seas.upenn.edu</a></p>
+            </div>
         </div>
-        <div style="padding: 20px; background: #f5f5f5; border-radius: 8px;">
-            <h3 style="color: #011F5B; margin-top: 0;">Arianna Alonso Bizzi</h3>
-            <p><a href="mailto:alari@seas.upenn.edu" style="color: #990000; text-decoration: none; font-weight: 600;">alari@seas.upenn.edu</a></p>
+
+        <div class="leader-card">
+            <div class="leader-photo">
+                <!-- Replace with: style="background-image:url('arianna.jpg'); background-size:cover; background-position:center;" -->
+            </div>
+            <div class="leader-info">
+                <h3>Arianna Alonso Bizzi</h3>
+                <p>Leadership Team — UPenn Prestige</p>
+                <p><a href="mailto:alari@seas.upenn.edu">alari@seas.upenn.edu</a></p>
+            </div>
         </div>
-        <div style="padding: 20px; background: #f5f5f5; border-radius: 8px;">
-            <h3 style="color: #011F5B; margin-top: 0;">Vishwas Dhabhai</h3>
-            <p><a href="mailto:vishwas.dhabhai@seas.upenn.edu" style="color: #990000; text-decoration: none; font-weight: 600;">vishwas.dhabhai@seas.upenn.edu</a></p>
+
+        <div class="leader-card">
+            <div class="leader-photo">
+                <!-- Replace with: style="background-image:url('vishwas.jpg'); background-size:cover; background-position:center;" -->
+            </div>
+            <div class="leader-info">
+                <h3>Vishwas Dhabhai</h3>
+                <p>Leadership Team — UPenn Prestige</p>
+                <p><a href="mailto:vishwas.dhabhai@seas.upenn.edu">vishwas.dhabhai@seas.upenn.edu</a></p>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:vishwas.dhabhai@seas.upenn.edu">vishwas.dhabhai@seas.upenn.edu</a></p>
+    <p>
+        For questions, collaboration ideas, or to get involved, email:
+        <a href="mailto:vishwas.dhabhai@seas.upenn.edu">vishwas.dhabhai@seas.upenn.edu</a>
+    </p>
 </section>
 
 <footer>
-    © 2025 UPenn Prestige — University of Pennsylvania
+    © 2025 UPenn Prestige — University of Pennsylvania (independent, student-led initiative)
 </footer>
-
 </body>
 </html>
