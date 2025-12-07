@@ -22,12 +22,17 @@
         header {
             background: var(--penn-blue);
             color: white;
-            padding: 32px 20px;
-            display: flex;                 /* put logo + title on one row */
-            align-items: center;           /* vertically center them */
-            justify-content: center;       /* center the whole block */
-            gap: 20px;                     /* space between logo and text */
-            text-align: left;              /* title text left-aligned */
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .logo-img {
+            height: 64px;        /* or 72px / 80px if you want it bigger */
+            width: auto;         /* keeps aspect ratio */
+            display: block;
+            border-radius: 8px;  /* optional, remove if you want sharp corners */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* optional */
         }
         header h1 {
             font-size: 32px;
@@ -41,23 +46,6 @@
             max-width: 760px;
             margin-left: auto;
             margin-right: auto;
-        }
-        /* Original, Penn-colored logo (not the official Penn shield) */
-        .logo-mark {
-            width: 72px;                   /* smaller, elegant size */
-            height: 72px;
-            border-radius: 16px;
-            overflow: hidden;
-            flex-shrink: 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-        }
-        .logo-mark img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;           /* keeps the logo proportions */
-        }
-        .logo-mark span {
-            display: block;
         }
         nav {
             background: #ffffff;
